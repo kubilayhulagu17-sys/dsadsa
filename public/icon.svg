@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#291d14" />
+      <stop offset="65%" stop-color="#140f0c" />
+      <stop offset="100%" stop-color="#090706" />
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="40%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#78350f" />
+    </linearGradient>
+    <linearGradient id="steel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f1f5f9" />
+      <stop offset="50%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#bg)" />
+  <rect x="20" y="20" width="472" height="472" rx="80" fill="none" stroke="url(#gold)" stroke-width="6" opacity="0.7" />
+  <!-- Shield Frame -->
+  <path d="M256 84 L388 134 V252 C388 338 326 404 256 434 C186 404 124 338 124 252 V134 Z" fill="#1c1613" stroke="url(#gold)" stroke-width="14" stroke-linejoin="round" />
+  <path d="M256 108 L366 150 V250 C366 322 314 380 256 406 C198 380 146 322 146 250 V150 Z" fill="none" stroke="#92400e" stroke-width="3" opacity="0.8" />
+  <!-- Sword -->
+  <path d="M256 116 L274 150 L268 300 H244 L238 150 Z" fill="url(#steel)" />
+  <path d="M256 116 L256 300" stroke="#ffffff" stroke-width="3" opacity="0.65" />
+  <path d="M206 294 H306 L296 312 H216 Z" fill="url(#gold)" />
+  <rect x="247" y="312" width="18" height="46" rx="3" fill="#451a03" stroke="url(#gold)" stroke-width="3" />
+  <circle cx="256" cy="368" r="14" fill="url(#gold)" />
+  <!-- Flame gem -->
+  <polygon points="256,184 274,218 256,252 238,218" fill="#f59e0b" stroke="#fef08a" stroke-width="3" />
+</svg>

@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Lora', Georgia, serif;
+    background-color: #090706;
+    color: #efe4cf;
+    user-select: none;
+    overflow-x: hidden;
+  }
+}
+
+.font-medieval {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-lore {
+  font-family: 'Lora', Georgia, serif;
+}
+
+.font-rpg-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Skeuomorphic Dark Fantasy Wrought-Iron & Antique Bronze UI Surfaces */
+.rpg-iron-panel {
+  position: relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(217, 146, 56, 0.08) 0%, transparent 62%),
+    linear-gradient(175deg, rgba(28, 22, 18, 0.94) 0%, rgba(16, 13, 11, 0.97) 55%, rgba(10, 8, 7, 0.99) 100%);
+  border: 1px solid #594329;
+  box-shadow:
+    inset 0 1px 0 rgba(251, 211, 141, 0.18),
+    inset 0 -2px 8px rgba(0, 0, 0, 0.9),
+    inset 0 0 28px rgba(0, 0, 0, 0.65),
+    0 14px 34px rgba(0, 0, 0, 0.78);
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.rpg-iron-panel::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(168, 124, 68, 0.16);
+  pointer-events: none;
+}
+
+.rpg-iron-panel-interactive:hover {
+  border-color: #b4823e;
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(254, 224, 160, 0.28),
+    inset 0 -2px 8px rgba(0, 0, 0, 0.9),
+    inset 0 0 32px rgba(180, 110, 34, 0.12),
+    0 18px 38px rgba(0, 0, 0, 0.85),
+    0 0 22px rgba(217, 119, 6, 0.14);
+}
+
+/* Aged Dark Parchment Scroll Accent Surface */
+.rpg-parchment-inset {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(186, 141, 78, 0.08), transparent 60%),
+    linear-gradient(180deg, rgba(38, 28, 20, 0.88) 0%, rgba(24, 18, 14, 0.95) 100%);
+  border: 1px solid rgba(138, 102, 57, 0.42);
+  box-shadow:
+    inset 0 2px 6px rgba(0, 0, 0, 0.75),
+    0 1px 0 rgba(251, 211, 141, 0.08);
+}
+
+/* Hammered Antique Gold Primary CTA */
+.rpg-btn-gold {
+  position: relative;
+  background: linear-gradient(180deg, #eab354 0%, #c98324 52%, #8d5112 100%);
+  border: 1px solid #f6d38b;
+  color: #191007;
+  text-shadow: 0 1px 0 rgba(255, 236, 190, 0.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 245, 214, 0.65),
+    inset 0 -2px 4px rgba(74, 38, 5, 0.7),
+    0 6px 18px rgba(0, 0, 0, 0.72),
+    0 0 18px rgba(217, 119, 6, 0.28);
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1), filter 150ms ease, box-shadow 150ms ease;
+}
+
+.rpg-btn-gold:hover {
+  filter: brightness(1.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 248, 224, 0.8),
+    inset 0 -2px 4px rgba(74, 38, 5, 0.7),
+    0 8px 22px rgba(0, 0, 0, 0.82),
+    0 0 24px rgba(245, 158, 11, 0.42);
+}
+
+.rpg-btn-gold:active {
+  transform: translateY(1px);
+}
+
+/* Forged Dark Iron Secondary Button */
+.rpg-btn-iron {
+  position: relative;
+  background: linear-gradient(180deg, #2d2520 0%, #1c1613 56%, #130f0d 100%);
+  border: 1px solid #6b5336;
+  color: #ebdcc4;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+  box-shadow:
+    inset 0 1px 0 rgba(235, 204, 152, 0.16),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.85),
+    0 5px 14px rgba(0, 0, 0, 0.68);
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1), border-color 150ms ease, color 150ms ease, background 150ms ease;
+}
+
+.rpg-btn-iron:hover {
+  border-color: #c28e48;
+  color: #fef3c7;
+  background: linear-gradient(180deg, #3a2f27 0%, #241c17 56%, #17120f 100%);
+}
+
+.rpg-btn-iron:active {
+  transform: translateY(1px);
+}
+
+/* Recessed Treasury Counter Slot (Gold / Gems / Power) */
+.rpg-treasury-slot {
+  background: linear-gradient(180deg, rgba(12, 9, 8, 0.96) 0%, rgba(23, 18, 15, 0.92) 100%);
+  border: 1px solid #6b502e;
+  box-shadow:
+    inset 0 2px 5px rgba(0, 0, 0, 0.92),
+    inset 0 -1px 0 rgba(251, 211, 141, 0.14),
+    0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Ornate Medieval Hairline Divider */
+.rpg-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(166, 122, 64, 0.55) 20%, rgba(226, 179, 102, 0.75) 50%, rgba(166, 122, 64, 0.55) 80%, transparent 100%);
+}
+
+/* Ambient Torch Ember Float (Compositor-only: transform & opacity) */
+@keyframes emberFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate3d(18px, -110px, 0) scale(0.35);
+    opacity: 0;
+  }
+}
+
+.rpg-ember {
+  animation: emberFloat var(--dur, 7s) linear infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rpg-ember {
+    animation: none;
+    opacity: 0.25;
+  }
+}
+
+/* Custom weathered scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0a08;
+}
+::-webkit-scrollbar-thumb {
+  background: #594329;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8a6639;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Şövalye Efsanesi: Krallığın Kılıcı",
+  "description": "30 bölümlük destansı hikaye, sinematikler, kılıç ve zırh kozmetikleri, güçlendirmeler ve boss savaşları içeren aksiyon RPG şövalye oyunu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
